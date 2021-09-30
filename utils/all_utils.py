@@ -7,8 +7,13 @@ import os
 plt.style.use("fivethirtyeight")
 
 
-
 def prepare_data(df):
+
+  """it is used to separate the dependent and independent features
+
+  Returns:
+      df: pandas dataframe
+  """
   X = df.drop("y", axis=1)
   y = df["y"]
   return X, y
